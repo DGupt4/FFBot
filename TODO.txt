@@ -1,0 +1,12 @@
+BASIC FEATURES
+- Queue embed (+ message > 2000 bug) ✔️
+- Skip current song ✔️
+- Fix Loop ✔️
+- Bug testing  
+- Now playing ✔️
+- Aliases ✔️
+- Command Timeout
+
+DATABASE STUFF
+- Bind bot to specific channel
+- DJ mode
