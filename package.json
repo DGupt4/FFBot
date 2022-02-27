@@ -16,5 +16,8 @@
     "distube": "^3.3.2",
     "dotenv": "^16.0.0",
     "libsodium-wrappers": "^0.7.9"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
