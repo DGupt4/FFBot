@@ -59,7 +59,18 @@ client.on("interactionCreate", async (interaction) => {
   if (!command) return;
 
   try {
-    await command.run(interaction, client);
+    if (
+      interaction.member.roles.cache.some(
+        (role) => role.name === "FFBot" || !command.djOnly
+      )
+    ) {
+      await command.run(interaction, client);
+    } else {
+      await interaction.reply({
+        content: "The bot is currently in DJ only mode!",
+        ephemeral: true,
+      });
+    }
   } catch (err) {
     if (err) console.error(err);
     await interaction.reply({
@@ -78,17 +89,6 @@ client.distube = new distube.default(client, {
   updateYouTubeDL: true,
   nsfw: true,
 });
-
-const status = (queue) =>
-  `Volume: \`${queue.volume}%\` | Filter: \`${
-    queue.filters.join(", ") || "Off"
-  }\` | Loop: \`${
-    queue.repeatMode
-      ? queue.repeatMode === 2
-        ? "All Queue"
-        : "This Song"
-      : "Off"
-  }\` | Autoplay: \`${queue.autoplay ? "On" : "Off"}\``;
 
 client.distube
   .on("addSong", (queue, song) => {

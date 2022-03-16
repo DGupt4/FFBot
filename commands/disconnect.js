@@ -3,6 +3,7 @@ const { joinVoiceChannel } = require("@discordjs/voice");
 const { MessageEmbed } = require("discord.js");
 
 module.exports = {
+  djOnly: true,
   data: new SlashCommandBuilder()
     .setName("disconnect")
     .setDescription("Disconnect the bot from vc!"),

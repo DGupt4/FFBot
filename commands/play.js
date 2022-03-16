@@ -1,6 +1,7 @@
 const { SlashCommandBuilder } = require("@discordjs/builders");
 
 module.exports = {
+  djOnly: true,
   data: new SlashCommandBuilder()
     .setName("play")
     .setDescription("Play a song")

@@ -2,6 +2,7 @@ const { SlashCommandBuilder } = require("@discordjs/builders");
 const { MessageEmbed, Util, Message } = require("discord.js");
 
 module.exports = {
+  djOnly: false,
   data: new SlashCommandBuilder()
     .setName("queue")
     .setDescription("View the current queue"),

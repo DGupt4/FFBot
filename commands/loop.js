@@ -3,6 +3,7 @@ const { MessageEmbed } = require("discord.js");
 const { EmbedMessage } = require("discord.js");
 
 module.exports = {
+  djOnly: true,
   data: new SlashCommandBuilder()
     .setName("loop")
     .setDescription("Loops the current song"),

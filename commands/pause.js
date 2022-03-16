@@ -3,6 +3,7 @@ const { InteractionCollector } = require("discord.js");
 const { MessageEmbed } = require("discord.js");
 
 module.exports = {
+  djOnly: true,
   data: new SlashCommandBuilder()
     .setName("pause")
     .setDescription("Pause the current song"),

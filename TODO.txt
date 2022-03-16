@@ -6,7 +6,9 @@ BASIC FEATURES
 - Now playing ✔️
 - Aliases ✔️
 - Command Timeout
+- Create FFBot role on join 
 
 DATABASE STUFF
-- Bind bot to specific channel
+- Bind
 - DJ mode
+- 

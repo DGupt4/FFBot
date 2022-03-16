@@ -2,6 +2,7 @@ const { SlashCommandBuilder } = require("@discordjs/builders");
 const { MessageEmbed } = require("discord.js");
 
 module.exports = {
+  djOnly: false,
   data: new SlashCommandBuilder()
     .setName("nowplaying")
     .setDescription("View the song that's currently playing"),

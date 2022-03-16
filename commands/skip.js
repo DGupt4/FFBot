@@ -3,6 +3,7 @@ const { MessageEmbed } = require("discord.js");
 const { joinVoiceChannel } = require("@discordjs/voice");
 
 module.exports = {
+  djOnly: true,
   data: new SlashCommandBuilder()
     .setName("skip")
     .setDescription("Skip the current song!"),
@@ -16,7 +17,10 @@ module.exports = {
     }
 
     if (!vc) {
-      return interaction.reply("Join a voice channel!");
+      return interaction.reply({
+        content: "Join a voice channel!",
+        ephemeral: true,
+      });
     }
 
     if (
