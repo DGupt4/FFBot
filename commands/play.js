@@ -13,10 +13,6 @@ module.exports = {
     const query = interaction.options.getString("song");
     const vc = interaction.member.voice.channel;
 
-    // if (interaction.user.id == "437366707049463819") {
-    //   return interaction.reply("Sorry! No dogs allowed! 🐶");
-    // }
-
     if (!vc) {
       return await interaction.reply({
         content: "Join a voice channel!",

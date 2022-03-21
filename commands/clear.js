@@ -15,10 +15,6 @@ module.exports = {
   run: async (interaction, client) => {
     const msg = interaction.options.getInteger("messages");
 
-    if (interaction.user.id == "437366707049463819") {
-      return interaction.reply("Sorry! No dogs allowed! 🐶");
-    }
-
     if (interaction.memberPermissions.has(Permissions.FLAGS.MANAGE_MESSAGES)) {
       if (msg > 100 || msg < 1) {
         return await interaction.reply({

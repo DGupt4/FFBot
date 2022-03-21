@@ -12,10 +12,6 @@ module.exports = {
     const vc = interaction.member.voice.channel;
     const queue = client.distube.getQueue(interaction);
 
-    if (interaction.user.id == "437366707049463819") {
-      return interaction.reply("Sorry! No dogs allowed! 🐶");
-    }
-
     if (!vc) {
       return interaction.reply({
         content: "Join a voice channel!",
